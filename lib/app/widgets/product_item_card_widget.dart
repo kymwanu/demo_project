@@ -36,8 +36,6 @@ class _ProductItemCardState extends State<ProductItemCard> {
       isFavorite = !isFavorite;
       _favoriteService.toggleFavorite(widget.item);
     });
-
-    // Notifica a tela pai para atualizar se necessário
     if (widget.onFavoriteUpdated != null) {
       widget.onFavoriteUpdated!();
     }
@@ -46,7 +44,7 @@ class _ProductItemCardState extends State<ProductItemCard> {
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 10,
+      elevation: 6,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
       child: InkWell(
         borderRadius: BorderRadius.circular(12.0),
@@ -65,7 +63,6 @@ class _ProductItemCardState extends State<ProductItemCard> {
             children: [
               Stack(
                 children: [
-                  // Imagem do produto
                   Center(
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(8.0),
@@ -77,7 +74,7 @@ class _ProductItemCardState extends State<ProductItemCard> {
                       ),
                     ),
                   ),
-                  // Ícone de favorito
+
                   Positioned(
                     top: 8,
                     right: 8,

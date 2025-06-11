@@ -17,16 +17,12 @@ class CategoryCard extends StatelessWidget {
       width: 80,
       margin: const EdgeInsets.only(right: 4),
       child: Card(
-        color: isSelected
-            ? Colors.white
-            : Colors.white, // Destaque para categoria selecionada
+        color: isSelected ? Colors.white : Colors.white,
         elevation: 3,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12),
           side: BorderSide(
-            color: isSelected
-                ? Colors.blue
-                : Colors.grey, // Borda azul para selecionado
+            color: isSelected ? Colors.blue : Colors.grey,
             width: isSelected ? 2 : 1,
           ),
         ),
@@ -41,9 +37,7 @@ class CategoryCard extends StatelessWidget {
                 Icon(
                   category.icon,
                   size: 30,
-                  color: isSelected
-                      ? Colors.blue
-                      : category.color, // Ícone azul para selecionado
+                  color: isSelected ? Colors.blue : category.color,
                 ),
                 const SizedBox(height: 8),
                 Text(
@@ -52,9 +46,7 @@ class CategoryCard extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 10,
                     fontWeight: FontWeight.w500,
-                    color: isSelected
-                        ? Colors.blue
-                        : Colors.black, // Texto azul para selecionado
+                    color: isSelected ? Colors.blue : Colors.black,
                   ),
                 ),
               ],

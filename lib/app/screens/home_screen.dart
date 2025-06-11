@@ -12,7 +12,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  String selectedCategory = 'Todos'; // Categoria inicial selecionada
+  String selectedCategory = 'Todos';
 
   final List<Item> allItems = [
     Item(
@@ -76,7 +76,6 @@ class _HomeScreenState extends State<HomeScreen> {
     ),
   ];
 
-  // Lista de categorias de produtos
   final List<Map<String, dynamic>> categories = [
     {'name': 'Todos', 'icon': Icons.widgets, 'color': Colors.blue},
     {
@@ -137,7 +136,6 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Lista horizontal de categorias
             SizedBox(
               height: 76,
               child: ListView.builder(
@@ -165,7 +163,6 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
 
             const SizedBox(height: 30),
-            // Título para a lista de produtos
             Text(
               'Produtos em destaque',
               style: TextStyle(
@@ -176,8 +173,6 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
 
             const SizedBox(height: 16),
-
-            // Lista de produtos
             Expanded(
               child: ListView.builder(
                 itemCount: filteredItems.length,

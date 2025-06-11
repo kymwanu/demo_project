@@ -7,7 +7,6 @@ class FavoriteService {
   factory FavoriteService() {
     return _instance;
   }
-
   FavoriteService._internal();
 
   List<Item> get favoriteItems => _favoriteItems;

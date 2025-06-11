@@ -22,11 +22,9 @@ class DetailScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            // No DetailScreen, altere:
             Hero(
               tag: 'item-image-${item.id}',
               child: Image.asset(
-                // Alterado de network para asset
                 item.imageUrl,
                 width: double.infinity,
                 height: 300,
